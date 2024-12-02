@@ -37,5 +37,5 @@ create table djelo (
 	klijent int not null references klijenti(sifra),
 	posao int not null references poslovi(sifra),
 	datumIzvrsenja date,
-	radnihSati decimal (18,2)
+	radnihSati decimal (18,2) not null
 );
