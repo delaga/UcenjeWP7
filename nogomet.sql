@@ -43,5 +43,5 @@ create table treneri (
 	prezime varchar(50),
 	nacionalnost varchar(50),
 	klub int not null references klubovi(sifra),
-	iskustvo varchar(50)
+	iskustvo int
 );
