@@ -18,10 +18,8 @@ create table djelatnici (
 create table poslovi (
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
 	nazivPosla varchar(50),
-	datum date,
-	izvrsen bit,
-	djelatnik int
-);
+	vrijednost decimal(18,2)
+	);
 
 create table klijenti(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
@@ -36,6 +34,9 @@ create table djelo (
 	djelatnik int not null references djelatnici(sifra),
 	klijent int not null references klijenti(sifra),
 	posao int not null references poslovi(sifra),
-	datumIzvrsenja date,
-	radnihSati decimal (18,2) not null
+	vrijemePocetka datetime,
+	zapocet bit,
+	zavrsen bit,
+	vrijemeZavrsetka datetime,
+	radnihSati decimal (18,2) not null,
 );
