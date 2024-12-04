@@ -2,7 +2,7 @@ use master;
 go
 drop database if exists RadniNalozi;
 go
-create database RadniNalozi;
+create database RadniNalozi collate Croatian_CI_AS;
 go
 use RadniNalozi;
 go
