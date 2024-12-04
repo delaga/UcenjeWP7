@@ -26,7 +26,8 @@ create table klijenti(
 	Naziv varchar(50) not null,
 	oib varchar(11),
 	adresa varchar (100),
-	email varchar (100)
+	email varchar (100),
+	odgovornaOsoba varchar(100)
 );
 
 create table djelo (
