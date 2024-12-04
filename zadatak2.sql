@@ -44,5 +44,5 @@ create table djelo (
 
 create table troskovi(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
-
+	naziv varchar(100),
 );
