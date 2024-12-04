@@ -41,3 +41,8 @@ create table djelo (
 	vrijemeZavrsetka datetime,
 	radnihSati decimal (18,2) not null,
 );
+
+create table troskovi(
+	sifra int not null PRIMARY KEY IDENTITY(1,1),
+
+);
