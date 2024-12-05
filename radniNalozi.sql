@@ -12,7 +12,8 @@ create table djelatnici (
 	ime varchar(50),
 	prezime varchar(50),
 	telefon varchar(50),
-	email varchar(80)
+	email varchar(80),
+	brutto2Placa decimal(18,2)
 );
 
 create table poslovi (
@@ -36,8 +37,6 @@ create table djelo (
 	klijent int not null references klijenti(sifra),
 	posao int not null references poslovi(sifra),
 	vrijemePocetka datetime,
-	zapocet bit,
-	zavrsen bit,
 	vrijemeZavrsetka datetime,
 	radnihSati decimal (18,2) not null,
 );
@@ -45,5 +44,6 @@ create table djelo (
 create table troskovi(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
 	naziv varchar(100),
+	kolicina decimal(18,2),
 	iznos decimal(18,2)
 );
