@@ -39,37 +39,29 @@ grupa int not null references grupe(sifra),
 polaznik int not null references polaznici(sifra)
 );
 
---select * from smjerovi;
---select * from grupe;
 
--- 1 čifra koju je dodijelila baza
-insert into smjerovi
-(naziv, trajanje, cijena, vaucer, izvodiseod) values 
-('Web programiranje',225,1245.99,1,'2024-09-07 17:00:00');
+-- 1 (Ovo je šifra koju je dodjelila baza)
+insert into smjerovi 
+(naziv, trajanje, cijena, vaucer, izvodiseod) values
+('Web programiranje',225,1254.99,1,'2024-09-07 17:00:00');
 
 insert into smjerovi(naziv) values
---2
+-- 2
 ('Java programer'),
---3
+-- 3
 ('Serviser'),
---4
+-- 4
 ('Knjigovodstvo');
 
-insert into grupe
-(naziv,smjer) values
--- 1
+
+insert into grupe (naziv, smjer) values
 ('WP6',1),
--- 2
 ('WP7',1),
--- 3
 ('JP27',2),
--- 4
 ('K12',4);
 
---select * from polaznici;
 
 INSERT INTO polaznici (ime, prezime, email) VALUES 
--- od 1 do 27
 ('Ante', 'Janković', 'antejankovic86@gmail.com'),
 ('Stojan', 'Carić', 'stojancaric8@gmail.com'),
 ('Željko', 'Lučan', 'lucko1987vk@gmail.com'),
@@ -98,11 +90,12 @@ INSERT INTO polaznici (ime, prezime, email) VALUES
 ('Ivan', 'Strmečki', 'ivan.strmecki8@gmail.com'),
 ('Bruno', 'Bašić', 'brunobasic031@gmail.com');
 
-insert into clanovi
-(grupa,polaznik) values
-(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),(2,7),(2,8),(2,9),(2,10),
-(2,11),(2,12),(2,13),(2,14),(2,15),(2,16),(2,17),(2,18),(2,19),(2,20),
-(2,21),(2,22),(2,23),(2,24),(2,25),(2,26),(2,27),
-(3,7),(3,17),(3,27);
 
---select * from clanovi;
+insert into clanovi (grupa,polaznik) values
+(2,1),(2,2),(2,3),(2,4),(2,5),(2,6),
+(2,7),(2,8),(2,9),(2,10),(2,11),(2,12),
+(2,13),(2,14),(2,15),(2,16),(2,17),(2,18),
+(2,19),(2,20),(2,21),(2,22),(2,23),(2,24),
+(2,25),(2,26),(2,27),
+
+(3,7),(3,17),(3,27);
