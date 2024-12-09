@@ -75,7 +75,4 @@ insert into vrstaTroskova(naziv) values
 ('Sitni potrošni materijal'),
 ('Kabliranje');
 
-insert into troskovi(naziv,djelo,kolicina,vrijednost) values
-('Osijek-SB',1,1,3.6),
-('UTP Cat6',1,50,1.29)
-;
+
