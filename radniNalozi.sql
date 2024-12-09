@@ -31,16 +31,21 @@ create table klijenti(
 	odgovornaOsoba varchar(100)
 );
 
-create table djelo (
+create table radniNalozi (
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
 	djelatnik int not null references djelatnici(sifra),
 	klijent int not null references klijenti(sifra),
-	posao int not null references poslovi(sifra),
 	vrijemePocetka datetime,
 	vrijemeZavrsetka datetime,
 	radnihSati decimal (18,2) not null,
 	napomena text
 );
+
+create table posao_radniNalog (
+	posao int not null references poslovi(sifra),
+	radniNalog int not null references radniNalozi(sifra)
+);
+
 
 create table vrstaTroskova(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
@@ -51,9 +56,16 @@ create table troskovi(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
 	naziv varchar(100),
 	vrsta int not null references vrstaTroskova(sifra),
-	djelo int not null references djelo(sifra),
+	radniNalog int not null references radniNalozi(sifra),
 	kolicina decimal(18,2),
-	vrijednost decimal(18,2)
+	cijena decimal(18,2)
+);
+
+create table radniSatiPoMjesecu(
+	sifra int not null PRIMARY KEY IDENTITY(1,1),
+	godina int not null,
+	mjesec char(2) not null,
+	sati int
 );
 
 insert into djelatnici(ime,prezime) values
@@ -67,23 +79,44 @@ insert into poslovi(nazivPosla,vrijednost) values
 ('Postavljanje nosača',99.99),
 ('Programiranje HomeAssistant',249.99);
 
-insert into djelo(djelatnik,klijent,posao,vrijemePocetka,vrijemeZavrsetka,radnihSati,napomena) values
-(1,1,1,'2024-10-02 08:00:00','2024-12-03 10:00:00',40,'Nosač postavljen po uputi ISP-a');
+insert into radniNalozi(djelatnik,klijent,vrijemePocetka,vrijemeZavrsetka,radnihSati,napomena) values
+(1,1,'2024-10-02 08:00:00','2024-12-03 10:00:00',40,'Nosač postavljen po uputi ISP-a');
 
 insert into vrstaTroskova(naziv) values
 ('Cestarina'),
 ('Sitni potrošni materijal'),
 ('Kabliranje');
 
+insert into posao_radniNalog(posao, radniNalog) values
 
-insert into troskovi(naziv,vrsta,djelo,kolicina,vrijednost) values
+(1,1);
+
+
+insert into troskovi(naziv,vrsta,radniNalog,kolicina,cijena) values
 ('Osijek-SB',1,1,1,3.60),
 ('UTP CAt6',3,1,50,1.22),
 ('Izolirka',2,1,3,1.99);
 
+insert into radniSatiPoMjesecu(godina,mjesec,sati) values
+(2024,01,176),
+(2024,02,168),
+(2024,03,168),
+(2024,04,168),
+(2024,05,168),
+(2024,06,160),
+(2024,07,184),
+(2024,08,160),
+(2024,09,168),
+(2024,10,184),
+(2024,11,152),
+(2024,12,160)
+;
+
 select * from djelatnici;
-select * from djelo;
+select * from radniNalozi;
 select * from klijenti;
 select * from poslovi;
 select * from vrstaTroskova;
 select * from troskovi;
+select * from posao_radniNalog;
+select * from radniSatiPoMjesecu;
