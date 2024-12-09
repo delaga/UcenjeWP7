@@ -45,7 +45,6 @@ create table djelo (
 create table troskovi(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
 	naziv varchar(100),
-	vrsta int not null references troskoviVrsta(sifra),
 	djelo int not null references djelo(sifra),
 	kolicina decimal(18,2),
 	vrijednost decimal(18,2)
@@ -62,3 +61,6 @@ insert into poslovi(nazivPosla,vrijednost) values
 ('Postavljanje nosača',99.99),
 ('Programiranje HomeAssistant',249.99);
 
+insert into troskovi(naziv,djelo,kolicina,vrijednost) values
+(Cestarina,),
+();
