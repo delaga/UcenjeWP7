@@ -76,3 +76,7 @@ insert into vrstaTroskova(naziv) values
 ('Kabliranje');
 
 
+insert into troskovi(naziv,vrsta,djelo,kolicina,vrijednost) values
+('Osijek-SB',1,1,1,3.60),
+('UTP CAt6',3,1,50,1.22),
+('Izolirka',2,1,3,1.99);
