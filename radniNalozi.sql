@@ -42,9 +42,15 @@ create table djelo (
 	napomena text
 );
 
+create table vrstaTroskova(
+	sifra int not null PRIMARY KEY IDENTITY(1,1),
+	naziv varchar(100),
+);
+
 create table troskovi(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
 	naziv varchar(100),
+	vrsta int not null references vrstaTroskova(sifra),
 	djelo int not null references djelo(sifra),
 	kolicina decimal(18,2),
 	vrijednost decimal(18,2)
@@ -61,6 +67,15 @@ insert into poslovi(nazivPosla,vrijednost) values
 ('Postavljanje nosača',99.99),
 ('Programiranje HomeAssistant',249.99);
 
+insert into djelo(djelatnik,klijent,posao,vrijemePocetka,vrijemeZavrsetka,radnihSati,napomena) values
+(1,1,1,'2024-10-02 08:00:00','2024-12-03 10:00:00',40,'Nosač postavljen po uputi ISP-a');
+
+insert into vrstaTroskova(naziv) values
+('Cestarina'),
+('Sitni potrošni materijal'),
+('Kabliranje');
+
 insert into troskovi(naziv,djelo,kolicina,vrijednost) values
-(Cestarina,),
-();
+('Osijek-SB',1,1,3.6),
+('UTP Cat6',1,50,1.29)
+;
