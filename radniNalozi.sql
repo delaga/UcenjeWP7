@@ -80,3 +80,10 @@ insert into troskovi(naziv,vrsta,djelo,kolicina,vrijednost) values
 ('Osijek-SB',1,1,1,3.60),
 ('UTP CAt6',3,1,50,1.22),
 ('Izolirka',2,1,3,1.99);
+
+select * from djelatnici;
+select * from djelo;
+select * from klijenti;
+select * from poslovi;
+select * from vrstaTroskova;
+select * from troskovi;
