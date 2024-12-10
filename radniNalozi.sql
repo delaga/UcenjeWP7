@@ -93,7 +93,7 @@ insert into posao_radniNalog(posao, radniNalog) values
 
 
 insert into troskovi(naziv,vrsta,radniNalog,kolicina,cijena) values
-('Osijek-SB',1,1,1,3.60),
+('Osijek-SB',1,1,2,3.60),
 ('UTP CAt6',3,1,50,1.22),
 ('Izolirka',2,1,3,1.99);
 
