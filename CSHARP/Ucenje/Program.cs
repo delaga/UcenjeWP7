@@ -23,4 +23,5 @@ using Ucenje;
 //E07subotaZ1.izvedi();
 //E07subotaZ2.Izvedi();
 //E07subotaZ4.Run();
-E07subotaZ5.Run();
+//E07subotaZ5.Run();
+E07subotaZ6.Run();
