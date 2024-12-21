@@ -4,7 +4,7 @@
 
 using Ucenje;
 
-E06Nizovi.Izvedi();
+//E06Nizovi.Izvedi();
 
 //E05UvjetnoGrananjeSwitch.Izvedi();
 
@@ -19,3 +19,8 @@ E06Nizovi.Izvedi();
 
 
 //Console.WriteLine("Hello, World!");
+
+//E07subotaZ1.izvedi();
+//E07subotaZ2.Izvedi();
+//E07subotaZ4.Run();
+E07subotaZ5.Run();
