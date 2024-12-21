@@ -4,6 +4,10 @@
 
 using Ucenje;
 
+E06Nizovi.Izvedi();
+
+//E05UvjetnoGrananjeSwitch.Izvedi();
+
 //E03Operatori.Izvedi();
 
 //E02Varijable.Izvedi();
@@ -12,9 +16,6 @@ using Ucenje;
 
 
 //E01UlazIzlaz.Izvedi();
-//E04uvijetnoGranjanjeIF.Run();
+
 
 //Console.WriteLine("Hello, World!");
-//E04_Z1.Izvedi();
-//Eo5_uvijetnoGrananjeSwitch.run();
-E06_Nizovi.Izvedi();

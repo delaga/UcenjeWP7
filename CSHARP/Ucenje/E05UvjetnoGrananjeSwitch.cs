@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class Eo5_uvijetnoGrananjeSwitch
+    internal class E05UvjetnoGrananjeSwitch
     {
-        public static void run()
+
+        public static void Izvedi()
         {
+            // switch radi s int, string, char i drugi https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/statements#1383-the-switch-statement
+
+
             int broj = 3;
 
             switch (broj)
@@ -25,15 +28,17 @@ namespace Ucenje
                     Console.WriteLine("Dobar");
                     break;
                 case 4:
-                    Console.WriteLine("VD");
+                    Console.WriteLine("Vrlo dobar");
                     break;
                 case 5:
-                    Console.WriteLine("Odl");
+                    Console.WriteLine("Odličan");
                     break;
                 default:
                     Console.WriteLine("Nije ocjena");
                     break;
             }
+
         }
+
     }
 }

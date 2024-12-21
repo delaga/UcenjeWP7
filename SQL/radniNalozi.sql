@@ -13,7 +13,7 @@ create table djelatnici (
 	prezime varchar(50) not null,
 	telefon varchar(50),
 	email varchar(80),
-	brutto2Placa decimal(18,2)
+	brutto2Placa decimal(18,2) not null
 );
 
 create table poslovi (
