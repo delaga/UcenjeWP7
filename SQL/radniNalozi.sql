@@ -9,8 +9,8 @@ go
 
 create table djelatnici (
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
-	ime varchar(50),
-	prezime varchar(50),
+	ime varchar(50) not null,
+	prezime varchar(50) not null,
 	telefon varchar(50),
 	email varchar(80),
 	brutto2Placa decimal(18,2)
@@ -18,8 +18,8 @@ create table djelatnici (
 
 create table poslovi (
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
-	nazivPosla varchar(50),
-	vrijednost decimal(18,2)
+	nazivPosla varchar(50) not null,
+	vrijednost decimal(18,2) not null
 	);
 
 create table klijenti(
@@ -37,7 +37,7 @@ create table radniNalozi (
 	klijent int not null references klijenti(sifra),
 	vrijemePocetka datetime,
 	vrijemeZavrsetka datetime,
-	radnihSati decimal (18,2) not null,
+	radnihSati decimal (18,2),
 	napomena text
 );
 
@@ -49,23 +49,23 @@ create table posao_radniNalog (
 
 create table vrstaTroskova(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
-	naziv varchar(100),
+	naziv varchar(100) not null,
 );
 
 create table troskovi(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
-	naziv varchar(100),
+	naziv varchar(100) not null,
 	vrsta int not null references vrstaTroskova(sifra),
 	radniNalog int not null references radniNalozi(sifra),
-	kolicina decimal(18,2),
-	cijena decimal(18,2)
+	kolicina decimal(18,2) not null,
+	cijena decimal(18,2) not null
 );
 
 create table radniSatiPoMjesecu(
 	sifra int not null PRIMARY KEY IDENTITY(1,1),
 	godina int not null,
 	mjesec char(2) not null,
-	sati int
+	sati int not null
 );
 
 insert into djelatnici(ime,prezime) values
