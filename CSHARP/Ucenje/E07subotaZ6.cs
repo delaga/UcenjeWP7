@@ -6,14 +6,33 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class E07subotaZ6
-    {
-        public static void Run()
-        {
-            Console.WriteLine("Unesi ime:");
-            string ime = Console.ReadLine();
 
-            Console.WriteLine(ime[ime.Length-1]);
+    // Proram unosi ime osobe
+    // S najmanjom mogućnošču greške program ispisuje da li je osoba muškog ili ženskog spola
+
+    internal class E07SubotaZ6
+    {
+
+        public static void Izvedi()
+        {
+            Console.Write("Unesi ime osobe: ");
+
+            string ime = Console.ReadLine();
+            ime = ime.ToLower();
+
+            if (ime[ime.Length - 1] == 'a')
+            {
+                Console.WriteLine("Žensko");
+            }
+            else
+            {
+                Console.WriteLine("Muško");
+            }
+
+           // Console.WriteLine(Console.ReadLine().ToLower()[^1]=='a' ? "Žensko" : "Muško");
+            
         }
+
+
     }
 }

@@ -6,31 +6,59 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class E07subotaZ4
-    {
-        public static void Run()
-        {
-            Console.WriteLine("Unesi ime grada: ");
-            string grad=Console.ReadLine();
+    /*
+    Program učitava od korisnika ime grada.U ovisnosti o imenu grada ispisuje regiju prema sljedećim pravilima:
 
-            switch (grad) {
+       Osijek -> Slavonija
+       Zadar -> Dalmacija
+       Čakovec -> Međimurje
+       Pula -> Istra
+       Za ostale unose program ispisuje: Ne znam koja je to regija.
+    */
+
+    internal class E07SubotaZ4
+    {
+
+        public static void Izvedi()
+        {
+            Console.Write("Upiši ime grada: ");
+            string grad = Console.ReadLine();
+
+
+            switch (grad)
+            {
                 case "Osijek":
                     Console.WriteLine("Slavonija");
                     break;
                 case "Zadar":
-                    Console.WriteLine("Blitvari");
+                    Console.WriteLine("Dalmacija");
                     break;
                 case "Čakovec":
-                    Console.WriteLine("Tamo gore");
+                    Console.WriteLine("Međimurje");
                     break;
                 case "Pula":
-                    Console.WriteLine("More");
+                    Console.WriteLine("Istra");
                     break;
                 default:
-                    Console.WriteLine("Nema");
+                    Console.WriteLine("Ne znam koja je to regija.");
                     break;
-
             }
+
+
+            // naprednija switch case sintaksa
+            string regija = grad switch
+            {
+                "Osijek" => "Slavonija",
+                "Zadar" => "Dalmacija",
+                "Čakovec" => "Međimurje",
+                "Pula" => "Istra",
+                _ => "Ne znam koja je to regija."
+            };
+
+            Console.WriteLine(regija);
+
         }
+
+
     }
 }

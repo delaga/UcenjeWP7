@@ -6,23 +6,26 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class E07subotaZ1
+    internal class E07SubotaZ1
     {
-        public static void izvedi()
+
+        // Za učitani cijeli broj između 10 i 99 ispiši jediničnu vrijednost
+        // 56 -> 6
+        // 82 -> 2
+
+        public static void Izvedi()
         {
-            Console.Write("Unesi 10-90: ");
+            Console.Write("Unesi cijeli broj između 10 i 99: ");
             int broj = int.Parse(Console.ReadLine());
-
-
             Console.WriteLine(broj%10);
 
-            Console.WriteLine("Ponovi unos: ");
+            Console.Write("Ponovi unos: ");
             Console.WriteLine(Console.ReadLine()[1]);
 
-            Console.WriteLine("______________");
-            Console.WriteLine(broj / 10);
-
+            // sada ispisati prvu znamenku (iz int)
+            Console.WriteLine(broj/10);
 
         }
+
     }
 }

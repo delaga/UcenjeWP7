@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class E07subotaZ3
+    // Program od korisnika traži unos dva cijela broja
+    // Program ispisuje manji
+    // unos 5 i 2 -> 2
+    // unos 3 i 8 -> 3
+    // unos 4 i 4 -> Brojevi su jednaki
+
+    internal class E07SubotaZ3
     {
-        public static void Run()
+
+        public static void Izvedi()
         {
-            Console.WriteLine("Unesi prvi broj");
-            int broj1 = int.Parse(Console.ReadLine());
+            Console.Write("Unesi prvi broj: ");
+            int pb = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Unesi drugi broj");
-            int broj2 = int.Parse(Console.ReadLine());
+            Console.Write("Unesi drugi broj: ");
+            int db = int.Parse(Console.ReadLine());
 
-            if (broj1 > broj2)
-            {
-                Console.WriteLine("Broj {0}",broj1);
-            }
-            else if(broj1 == broj2)
-                    {
-                Console.WriteLine("Jednaki su");
-                }
-            else { 
-                Console.WriteLine("Veći je {0}",broj2); 
-            }
+            Console.WriteLine(pb<db ? pb : db<pb ? db : "Jednaki su");
+
+
+            // DZ: isto nappraviti za tri broja
         }
+
     }
 }

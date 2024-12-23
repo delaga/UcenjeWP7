@@ -4,6 +4,18 @@
 
 using Ucenje;
 
+//E07SubotaZ6.Izvedi();
+
+//E07SubotaZ5.Izvedi();
+
+//E07SubotaZ4.Izvedi();
+
+//E07SubotaZ3.Izvedi();
+
+//E07SubotaZ2.Izvedi();
+
+//E07SubotaZ1.Izvedi();
+
 //E06Nizovi.Izvedi();
 
 //E05UvjetnoGrananjeSwitch.Izvedi();
@@ -19,9 +31,5 @@ using Ucenje;
 
 
 //Console.WriteLine("Hello, World!");
+E08forPetlja.Run();
 
-//E07subotaZ1.izvedi();
-//E07subotaZ2.Izvedi();
-//E07subotaZ4.Run();
-//E07subotaZ5.Run();
-E07subotaZ6.Run();
