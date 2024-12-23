@@ -92,7 +92,53 @@ namespace Ucenje
 
             }
 
+            Console.WriteLine("**************");
 
+            for (int i = 0; i < 10; i++)
+
+            {
+                if (i == 4)
+                {
+                    continue;
+                }
+                Console.WriteLine("Reserva {0}. mjesto",i+1);
+            }
+
+            Console.WriteLine("**************");
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 5)
+                {
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+
+            int brojZaProvjeru = 157;
+            int brojIteracija=1;
+            bool prim = true;
+
+            for (int i = 2; i < brojZaProvjeru; i++)
+            {
+                Console.WriteLine("{0}%{1}=={2} {3}", brojZaProvjeru, i, brojZaProvjeru%i,brojIteracija++);
+                if (brojZaProvjeru % i == 0)
+                {
+                    prim=false;
+                    break;
+                }
+            }
+            Console.WriteLine("{0} {1} prim broj", brojZaProvjeru, prim ? "je":"nije");
+
+            for (int i = 0; i > -1; i++)
+                {
+                break;
+            }
+
+            //for (; ; )
+            //{
+            //    Console.WriteLine("{0} {0} {0} {0} {0} {0} {0} {0} {0} {0} {0} ", new Random().Next());
+            //}
 
 
 
