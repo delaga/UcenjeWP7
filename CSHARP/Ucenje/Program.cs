@@ -32,5 +32,5 @@ using Ucenje;
 
 //Console.WriteLine("Hello, World!");
 //E08forPetlja.Run();
-ZimskiZadaci03.Run();
+ZimskiZadaci04.Run();
 
