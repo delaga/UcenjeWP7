@@ -19,7 +19,7 @@ namespace Ucenje
             {
                 cejir += rijec[i];
             }
-            Console.WriteLine("Rijec {0} je {1}", rijec, cejir);
+            Console.WriteLine("Rijec {0} je obrnuto = {1}", rijec, cejir);
         }
     }
 }
