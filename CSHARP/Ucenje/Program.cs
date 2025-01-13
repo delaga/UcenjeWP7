@@ -33,4 +33,7 @@ using Ucenje;
 //Console.WriteLine("Hello, World!");
 //E08forPetlja.Run();
 //ZimskiZadaci10.Run();
-E10WhilePetlja.Run();
+//E10WhilePetlja.Run();
+//E11DoWhile.Run();
+//E12ForEach.Run();
+E12Z1.Izvedi();

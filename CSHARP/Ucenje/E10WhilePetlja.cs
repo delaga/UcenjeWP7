@@ -34,6 +34,20 @@ namespace Ucenje
                 Console.WriteLine(i*j);
             }
 
+            int odBroja = 0;
+            int doBroja = 10;
+
+            for(int x=odBroja;x<=doBroja; x++)
+            {
+                Console.WriteLine(x);   
+            }
+
+            while (false)
+            {
+                Console.WriteLine("Neema"   );
+
+            }
+
 
 
 
