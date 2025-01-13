@@ -36,4 +36,5 @@ using Ucenje;
 //E10WhilePetlja.Run();
 //E11DoWhile.Run();
 //E12ForEach.Run();
-E12Z1.Izvedi();
+//E12Z1.Izvedi();
+E12Z2.Izvedi();
