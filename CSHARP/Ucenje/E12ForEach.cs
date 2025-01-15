@@ -8,33 +8,51 @@ namespace Ucenje
 {
     internal class E12ForEach
     {
-        public static void Run()
+        public static void Izvedi()
         {
-            Console.WriteLine("Unesi ime ");
-            string grad=Console.ReadLine();
+            Console.WriteLine("E12");
 
-            for (int i = 0; i < grad.Length; i++) 
+            // foreach je skraćeni for
+
+            Console.Write("Unesi ime grada: ");
+            string grad = Console.ReadLine();
+
+            // svako slovo grada ispiši jedno ispod drugog
+            for(int i = 0; i < grad.Length; i++)
             {
                 Console.WriteLine(grad[i]);
             }
 
-            Console.WriteLine("-----------------");
+            Console.WriteLine("**************");
+            // u slučajevima kada idemo od početka do kraja (većina puta)
 
             foreach(char znak in grad)
             {
-
                 Console.WriteLine(znak);
             }
 
-            Console.WriteLine("-----------------");
-            for (int i = grad.Length-1; i<=0;i--)
+            Console.WriteLine("**************");
+
+            for(int i=grad.Length-1;i>=0; i--)
             {
                 Console.WriteLine(grad[i]);
             }
 
-            int[] brohjevi = { 1, 2, 65, 8, 4796, };
+            Console.WriteLine("*********************");
+
+            
+            for (int i = 0; i < grad.Length; i++)
+            {
+                Console.WriteLine(grad[^(i+1)]);
+            }
 
 
+            int[] brojevi = { 1, 2, 2, 3, 3, 3, 3, 3 };
+
+            foreach(int i in brojevi)
+            {
+                Console.WriteLine(i);
+            }
 
 
         }

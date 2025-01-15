@@ -8,33 +8,70 @@ namespace Ucenje
 {
     internal class E12Z1
     {
+        // S 4 različite petlje zbrojiti prvih 100 brojeva (5050)
+
         public static void Izvedi()
         {
-            int brojac = 0;
 
+            int suma = 0;
+            for(int i = 0; i <= 100; i++)
+            {
+                suma += i;
+            }
+            Console.WriteLine(suma);
+
+            Console.WriteLine("******************");
+
+            suma = 0;
+            for (int i = 0; i <= 100; suma += i, i++) ;
+
+            Console.WriteLine(suma);
+
+            Console.WriteLine("******************");
+
+            suma = 0;
+            int b = 0;
+            while (b <= 100)
+            {
+                suma += b++;
+            }
+
+            Console.WriteLine(suma);
+
+            Console.WriteLine("******************");
+
+            suma = 0; b = 0;
+
+            do
+            {
+                suma += ++b;
+            } while (b < 100);
+
+            Console.WriteLine(suma);
+
+            Console.WriteLine("******************");
+
+            int[] niz = new int[100];
             for (int i = 0; i < 100; i++)
             {
-                brojac += i;
+                niz[i] = i+1;
             }
-            Console.WriteLine(brojac);
 
-            brojac = 0;
-            int b = 0;
+            Console.WriteLine(string.Join(",",niz));
 
-            Console.WriteLine("------------");
+            suma = 0;
 
-            int[] brojevi = Enumerable.Range(1, 100).ToArray();
-
-            int zbroj = 0;
-
-            // Koristimo foreach petlju za zbrajanje
-            foreach (int broj in brojevi)
+            foreach(int broj in niz)
             {
-                zbroj += broj;
+                suma += broj;
             }
 
-            Console.WriteLine("Zbroj prvih 100 brojeva je: " + zbroj);
+            Console.WriteLine(suma);
+
+
+
 
         }
+
     }
 }

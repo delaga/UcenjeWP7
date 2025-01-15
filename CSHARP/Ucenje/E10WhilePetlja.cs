@@ -8,47 +8,52 @@ namespace Ucenje
 {
     internal class E10WhilePetlja
     {
-        public static void Run() 
+        public static void Izvedi()
         {
-            //Console.WriteLine("Burek");
+            //Console.WriteLine("E10");
 
-            //while radi sa bool
+            // while radi s bool
 
+            // beskonačna petlja
             while (true)
             {
-                Console.WriteLine("Nest");
+                Console.WriteLine("Ispis iz beskonačne petlje nakon čega je break");
                 break;
             }
-            int i = 0;
 
-            while (i++ < 10) 
+            int i = 0;
+            while (i++ < 10)
             {
-                Console.WriteLine("i");
+                Console.WriteLine(i);
+            
             }
 
-            Console.WriteLine("-----------------------");
-
+            Console.WriteLine("*****************");
+            // continue radi na isti način
             int j = 0;
-
-            while (i >= 10 && j++ < 10) {
+            while(i>=10 && j++ < 10) // može još i || te !
+            {
                 Console.WriteLine(i*j);
             }
 
-            int odBroja = 0;
-            int doBroja = 10;
+            Console.WriteLine("---------------------------------");
+            // u for i while se ne mora ući
 
-            for(int x=odBroja;x<=doBroja; x++)
-            {
-                Console.WriteLine(x);   
+            int odBroja = 10;
+            int doBroja = 0;
+
+
+            for(int x=odBroja; x<doBroja; x++) 
+            { 
+                Console.WriteLine(x); 
             }
 
-            while (false)
+            bool uvjet = false;
+
+            while (uvjet)
             {
-                Console.WriteLine("Neema"   );
-
+                Console.WriteLine("Neće se ispisati");
             }
-
-
 
 
 

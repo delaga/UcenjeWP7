@@ -4,6 +4,16 @@
 
 using Ucenje;
 
+//E12Z1.Izvedi();
+
+//E12ForEach.Izvedi();
+
+//E11DoWhilePetlja.Izvedi();
+
+//E10WhilePetlja.Izvedi();
+
+//E08ForPetlja.Izvedi();
+
 //E07SubotaZ6.Izvedi();
 
 //E07SubotaZ5.Izvedi();
@@ -31,10 +41,7 @@ using Ucenje;
 
 
 //Console.WriteLine("Hello, World!");
-//E08forPetlja.Run();
-//ZimskiZadaci10.Run();
-//E10WhilePetlja.Run();
-//E11DoWhile.Run();
-//E12ForEach.Run();
-//E12Z1.Izvedi();
-E12Z2.Izvedi();
+
+//E13trycatch.Izvedi();
+//E13Z1.Izvedi();
+E13Z2.Izvedi();
