@@ -6,92 +6,83 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class E13trycatch
+    internal class E13TryCatch
     {
         public static void Izvedi()
         {
-            //int b = 0;
+            Console.WriteLine("E13");
 
-            //while (true)
-            //{
+            
 
-            //    Console.WriteLine("Unesi ");
+            int b = 0;
 
-            //    try
-            //    {
-            //        b = int.Parse(Console.ReadLine());
-            //        break;
-            //    }
-            //    catch
-            //    {
-            //        Console.WriteLine("Niste unijeli ");
-            //    }
-            //}
-            //Console.WriteLine(b);
-
-
-            //Console.WriteLine("______________");
-
-
-
-            int godine = 0;
-
-            string unos;
-
-            int brojz;
-
-            for(; ; )
+            while (true)
             {
-                pocetak:
-
-                Console.WriteLine("Unesi godine između 1 i 110");
-                unos=Console.ReadLine();
-
-                if (unos.Trim() =="")
-                {
-                    Console.WriteLine("Molim unesite vrijednost");
-                    continue;
-                }
-
+                Console.Write("Unesi broj: ");
                 try
                 {
-                    godine=int.Parse(unos);
-
-                    if (godine < 1 || godine > 110)
-                    {
-                        Console.WriteLine("Zicer nisu godine (1-110)");
-                        continue;
-                    }
+                    b = int.Parse(Console.ReadLine());
                     break;
-
-
                 }
-                catch 
+                catch
                 {
-                    //unos 12o
-
-                    foreach (char znak in unos)
-                    {
-                        brojz= znak;
-                        if((brojz<48 || brojz>57))
-                        {
-                            Console.WriteLine("{0} Nije broj", znak);
-                            goto pocetak;
-                                                    }
-                    }
-
-                    Console.WriteLine("Nije broj (ne seri)");
-                    
-                    
+                    Console.WriteLine("Niste unijeli broj");
                 }
-
             }
 
 
+            Console.WriteLine(b);
 
 
+            Console.WriteLine("***********************");
 
 
+            // osiguraj unos godine između 1 i 110
+
+            int godine = 0;
+            string unos;
+            int brojZnak;
+            for(; ; )
+            {
+                pocetak: // labela
+                Console.Write("Unesi svoje godine: ");
+                unos = Console.ReadLine();
+                if (unos.Trim() == "")
+                {
+                    Console.WriteLine("Molimo unesite vrijednost");
+                    continue;
+                }
+                try
+                {
+                    godine = int.Parse(unos);
+                    // siguran si da je broj unesen ali ne znaš koji
+                    if (godine < 1 || godine > 110)
+                    {
+                        Console.WriteLine("Nisi unio odgovarajući broj (1-110)");
+                        continue;
+                    }
+                    break;
+                }
+                catch 
+                {
+                    // unos 12O
+                    foreach(char znak in unos)
+                    {
+                        brojZnak = znak;
+                        if(brojZnak<48 || brojZnak > 57)
+                        {
+                            Console.WriteLine("Uneseni znak {0} nije broj, " +
+                                "on je dio abecede ...{1}, {2}, {3}...", znak, 
+                                (char)(brojZnak-1),znak,(char)(brojZnak+1));
+                            goto pocetak;
+                        }
+                    }
+                    Console.WriteLine("Nisi unio broj");
+                    
+                }
+            }
+
+            Console.WriteLine("Imate {0} godina", godine);
 
         }
     }
