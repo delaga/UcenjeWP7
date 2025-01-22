@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class E14Z3
+    internal class E15_Z1
     {
-
-        public static void Izvedi()
+        public static void Ajd()
         {
             
-        
         }
     }
 }
