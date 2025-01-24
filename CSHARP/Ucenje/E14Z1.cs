@@ -8,15 +8,14 @@ namespace Ucenje
 {
     internal class E14Z1
     {
-        
         /// <summary>
-        /// Ucita 2 izbaci 1
+        /// Zadatak: Program učitava dva broja i ispisuje zbroj
         /// </summary>
         public static void Izvedi()
         {
-            Console.WriteLine(E14Metode.UcitajBroj("Unesi 1 broj",0,int.MaxValue) + E14Metode.UcitajBroj("Unesi 2 broj",0,int.MaxValue));
-
-
+            Console.WriteLine(E14Metode.UcitajBroj("Unesi prvi broj",10,20) 
+                + E14Metode.UcitajBroj("Unesi drugi broj",1,10));
         }
+
     }
 }

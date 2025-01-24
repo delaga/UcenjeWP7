@@ -4,6 +4,15 @@
 
 using Ucenje;
 
+new Ucenje.E17klasaObjekt.Program();
+
+//E16Vjezbanje.Izvedi();
+
+//E15Rekurzija.Izvedi();
+
+//E14Z3.Izvedi();
+
+//E14Metode.Izvedi();
 
 //E13Z2.Izvedi();
 
@@ -15,6 +24,34 @@ using Ucenje;
 
 //E11DoWhilePetlja.Izvedi();
 
+//E10WhilePetlja.Izvedi();
+
+//E08ForPetlja.Izvedi();
+
+//E07SubotaZ6.Izvedi();
+
+//E07SubotaZ5.Izvedi();
+
+//E07SubotaZ4.Izvedi();
+
+//E07SubotaZ3.Izvedi();
+
+//E07SubotaZ2.Izvedi();
+
+//E07SubotaZ1.Izvedi();
+
+//E06Nizovi.Izvedi();
+
+//E05UvjetnoGrananjeSwitch.Izvedi();
+
+//E03Operatori.Izvedi();
+
+//E02Varijable.Izvedi();
+
+//E01Z1.Izvedi();
 
 
-E16_Vjezbanje.Ajd();
+//E01UlazIzlaz.Izvedi();
+
+
+//Console.WriteLine("Hello, World!");
