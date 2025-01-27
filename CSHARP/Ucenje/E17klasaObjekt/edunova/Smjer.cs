@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ucenje.E17klasaObjekt.edunova
+namespace Ucenje.E17KlasaObjekt.edunova
 {
     public class Smjer
     {
@@ -13,6 +13,6 @@ namespace Ucenje.E17klasaObjekt.edunova
         public int Trajanje { get; set; }
         public decimal Cijena { get; set; }
         public bool Vaucer { get; set; }
-        public DateTime IzvodiSeOd { get; set; }
+        public DateTime? IzvodiSeOd { get; set; }
     }
 }
