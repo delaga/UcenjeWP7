@@ -68,8 +68,8 @@ create table radniSatiPoMjesecu(
 	sati int not null
 );
 
-insert into djelatnici(ime,prezime) values
-('Rade','Janković'),('Dino','Dizdarević'),('Milan','Drača'),('Mirza','Delagić');
+insert into djelatnici(ime,prezime,brutto2Placa) values
+('Rade','Janković',1000),('Dino','Dizdarević',1000),('Milan','Drača',1000),('Mirza','Delagić',1000);
 
 insert into klijenti(naziv,oib,adresa,email,odgovornaOsoba) values
 ('Murder Inc.','98765432155','Tamo nekud bb','uf@uf.com','Vrlo neodgovorna osoba'),
