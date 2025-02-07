@@ -11,21 +11,21 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+
+
+app.MapOpenApi();
+
+
+
+
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.UseSwagger();
-app.UseSwaggerUI(p =>
-{
-    p.EnableTryItOutByDefault();
-    p.ConfigObject.AdditionalItems.Add("requestSnippetsEnabled", true);
-});
+
+app.UseSwaggerUI();
 
 app.MapControllers();
 
