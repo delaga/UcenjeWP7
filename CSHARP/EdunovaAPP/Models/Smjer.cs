@@ -6,14 +6,9 @@ namespace EdunovaAPP.Models
     {
         public string Naziv { get; set; } = "";
         public int? Trajanje { get; set; }
-
         [Column("cijena")]
-        public decimal? CijenaSmijera { get; set; }
-
-        public bool? Vaucer { get; set; }
-
+        public decimal? CijenaSmjera { get; set; }
+        public bool? vaucer { get; set; }
         public DateTime? IzvodiSeOd { get; set; }
-
-
     }
 }
